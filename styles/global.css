@@ -1,0 +1,75 @@
+@import 'https://use.typekit.net/nmv7mjy.css';
+
+html, body {
+  background: white;
+  height: 100%;
+  color: #000545;
+  font-family: halyard-text, sans-serif;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1px;
+  margin: 0;
+  padding: 0;
+}
+
+#__next, .container {
+  height: 100%;
+}
+
+main {
+  padding: 24px;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 80px calc(100% - 128px);
+  grid-template-columns: max(20%, 300px) 70%;
+  grid-template-areas: "header header header" "sidebar main main" "sidebar main main";
+  grid-row-gap: 24px;
+}
+
+.search-bar {
+  display: flex;
+  grid-area: header;
+  background: rgba(35, 38, 132, 0.1);
+}
+
+.navigation-bar {
+  display: flex;
+  grid-area: sidebar;
+  padding: 100px 0;
+  flex-direction: column;
+}
+
+.navigation-bar .card {
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.navigation-bar .card:hover {
+  background: rgba(35, 38, 132, 0.1);
+}
+
+.wrapped-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(19, 55, 128, .09), 0px 0px 2px rgba(19, 55, 128, .11);
+  padding: 16px;
+  position: relative;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-areas: "case case case" "case case case" "case case case";
+  grid-area: main;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+.medium {
+  max-width: 272px;
+  max-height: 150px;
+}
+
+.large {
+  max-width: 544px;
+  max-height: 300px;
+}

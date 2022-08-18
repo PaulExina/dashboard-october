@@ -1,5 +1,9 @@
 @import 'https://use.typekit.net/nmv7mjy.css';
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   background: white;
   height: 100%;
@@ -19,10 +23,9 @@ main {
   padding: 24px;
   display: grid;
   height: 100%;
-  grid-template-rows: 80px calc(100% - 128px);
-  grid-template-columns: max(20%, 300px) 70%;
-  grid-template-areas: "header header header" "sidebar main main" "sidebar main main";
-  grid-row-gap: 24px;
+  grid-template-areas: "card card card card" "card card card card" "card card card card" "card card card card";
+  grid-gap: 16px;
+  grid-template-columns: 23.8%;
 }
 
 .search-bar {
@@ -52,16 +55,32 @@ main {
   background: white;
   border-radius: 6px;
   box-shadow: 0px 2px 4px rgba(19, 55, 128, .09), 0px 0px 2px rgba(19, 55, 128, .11);
+  flex: 1;
   padding: 16px;
   position: relative;
 }
 
+.wrapped-card.light-blue {
+  background: #EBF1FF;
+}
+
+.wrapped-card.blue {
+  background: #0055EA;
+}
+
+.wrapped-card.dark-blue {
+  background: #000545;
+}
+
+.wrapped-card.purple {
+  background: #283CB2;
+}
+
 .dashboard-container {
-  display: grid;
-  grid-template-areas: "case case case" "case case case" "case case case";
   grid-area: main;
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  display: grid;
+  gap: 24px;
+  
 }
 
 .medium {
@@ -72,4 +91,19 @@ main {
 .large {
   max-width: 544px;
   max-height: 300px;
+}
+
+.dash-card {
+  flex: 1;
+  display: flex;
+}
+
+.dash-zone {
+  border: 1px dashed #C1CCE6;
+  border-radius: 6px;
+}
+
+.dash-zone:hover {
+  background: #F0F5FF;
+  border-color: #0055EA;
 }

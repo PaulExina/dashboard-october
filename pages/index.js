@@ -1,5 +1,34 @@
-import Head from 'next/head'
-import Link from 'next/link';
+import Head from 'next/head';
+import metrics from '../public/metrics.json';
+
+export const DashBoard = () => {
+  let zones = [];
+
+  zones = metrics.map((metric) => {
+    const metricStyle = metric.position 
+      ? {
+        gridColumn: metric.position.column.span 
+          ? `${metric.position.column.index} /span ${metric.position.column.span}`
+          : metric.position.column.index,
+        gridRow: metric.position.row.span 
+          ? `${metric.position.row.index} /span ${metric.position.row.span}`
+          : metric.position.row.index
+      }
+      : undefined;
+    
+    return (
+      <div 
+        className='wrapped-card' 
+        id={metric.id}
+        style={metricStyle}
+        >
+        {metric.title}
+      </div> 
+    )
+  });
+
+  return <>{zones}</>;
+}
 
 export default function Home() {
   return (
@@ -10,36 +39,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="search-bar"></div>
-        <div className="navigation-bar">
-          <div className="card">
-            <Link  href="/entities/team">
-              <h3>Team</h3>
-            </Link>
-          </div>
-
-          <div className="card">
-            <Link  href="/entities/product">
-              <h3>Product</h3>
-            </Link>
-          </div>
-          <div className="card">
-            <Link  href="/entities/tech">
-              <h3>Tech</h3>
-            </Link>
-          </div>
-        </div>
-        <div className="dashboard-container">
-          <div className="wrapped-card large"></div>
-          <div className="wrapped-card medium"></div>
-          <div className="wrapped-card large"></div>
-          <div className="wrapped-card medium"></div>
-          <div className="wrapped-card large"></div>
-          <div className="wrapped-card medium"></div>
-          <div className="wrapped-card large"></div>
-          <div className="wrapped-card medium"></div>
-        </div>
-      </main>
+        <DashBoard />
+      </main>  
     </div>
   )
 }

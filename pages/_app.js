@@ -1,5 +1,6 @@
 // import App from 'next/app'
 import '../styles/global.css';
+import '../styles/containers/modal.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

@@ -87,8 +87,8 @@
   }
 }, {
   "title": "Day-offs",
-  "id": "api-status",
-  "endpoint": "hyperping"
+  "id": "day-offs",
+  "endpoint": "bamboohr/manual"
 }, {
   "title": "Tech Product Kickoff US",
   "id": "product-us",

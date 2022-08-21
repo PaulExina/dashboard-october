@@ -1,4 +1,5 @@
 @import 'https://use.typekit.net/nmv7mjy.css';
+@import './containers/modal.css';
 
 * {
   box-sizing: border-box;
@@ -7,7 +8,7 @@
 html, body {
   background: white;
   height: 100%;
-  color: #000545;
+  color: #242533;
   font-family: halyard-text, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: 0.1px;
@@ -17,9 +18,11 @@ html, body {
 
 #__next, .container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-main {
+.dashboard {
   padding: 24px;
   display: grid;
   height: 100%;
@@ -106,4 +109,104 @@ main {
 .dash-zone:hover {
   background: #F0F5FF;
   border-color: #0055EA;
+}
+
+.squad-board section {
+  flex: 3;
+}
+
+.squad-board article {
+  height: 64px;
+  width: 64px;
+  margin: 10px;
+}
+
+.squad-board aside {
+  grid-area: aside;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.squad-board {
+  display: flex;
+}
+
+.dev {
+  background-color: #283CB2;
+}
+
+header {
+  padding: 32px 32px 0 32px;
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: 0px 2px 4px rgba(19, 55, 128, 0.09), 0px 0px 2px rgba(19, 55, 128, 0.11);
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .upper-tabs {
+  flex: 1 0 100%;
+  display: flex;
+  margin: 32px 0 0 0;
+}
+
+header nav a {
+  color: #5E6680;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0 32px 10px 0;
+}
+
+header nav a:hover {
+  color: #242533;
+}
+
+header nav a.current {
+  color: #242533;
+  font-weight: 400;
+  position: relative;
+}
+
+header nav a.current:after {
+  content: '';
+  background: #242533;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+
+header .back-button {
+  border: 1px solid #DFE5F2;
+  border-radius: 6px;
+  display: flex;
+  padding: 3px;
+  align-self: center;
+  margin: 0 12px 0 0;
+  cursor: pointer;
+}
+
+header .back-button:hover {
+  background: #F0F5FF;
+  border-color: #0055EA;
+  
+} 
+
+header .back-button path {
+  fill: #0055EA;
+}
+
+main {
+  padding: 32px;
+  background: #F7F9FB;
+  height: 100%;
 }

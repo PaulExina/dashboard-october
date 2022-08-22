@@ -1,3 +1,36 @@
+import { useState } from 'react';
+import { useDrop } from 'react-dnd';
+
+export const SquadMember = ({type}) => {
+  const [member, setMember] = useState({});
+
+  const addToSquad = (member) => {
+    // update member in DB
+    setMember(member);
+  };
+
+  const [, drop] = useDrop(
+    () => ({
+      accept: 'teammember',
+      canDrop: (item) => item.type === type,
+      drop: (item, monitor) => {
+        addToSquad(item);
+        return undefined;
+      },
+    }),
+    [addToSquad],
+  )
+
+  return (
+    <div 
+      ref={drop}
+      className={`member ${type} ${member.id?'filled':''}`}
+    >
+      {member.id}
+    </div>
+  )
+}
+
 export const TeamSquad = ({style, className, composition, children}) => {
   return (
     <article 
@@ -7,61 +40,31 @@ export const TeamSquad = ({style, className, composition, children}) => {
         display: 'flex',
         flexFlow: 'row wrap',
         gap: '16px',
-        justifyContent: 'center',
+        justifyContent: 'center'
       }}>
-      <div style={{...styles.member, ...styles.em}}></div>
+      <SquadMember type='title'/>
+      <SquadMember type='em'/>
       {
         Array(composition.design)
           .fill()
           .map(() => (
-            <div style={{...styles.member, ...styles.design}}>
-            </div>
+            <SquadMember type='design'/>
           ))
       }
       {
         Array(composition.product)
           .fill()
           .map(() => (
-            <div style={{...styles.member, ...styles.product}}>
-            </div>
+            <SquadMember type='product'/>
           ))
       }
       {
         Array(composition.tech)
           .fill()
           .map(() => (
-            <div style={{...styles.member, ...styles.tech}}>
-            </div>
+            <SquadMember type='tech'/>
           ))
       }
     </article>
   )
-}
-
-const styles = {
-  member: {
-    border: '2px dashed grey',
-    borderRadius: '50%',
-    maxHeight: '64px',
-    width: '64px',
-    opacity: 0.5
-  },
-  em: {
-    flex: '1 0 100%',
-    maxWidth: 'none',
-    borderRadius: '6px',
-  },
-  design: {
-    borderColor: '#4fbdb2',
-    background: '#cfeeeb'
-  },
-  product: {
-    background: '#fae5d6',
-    borderColor: '#eb9c64',
-    
-  },
-  tech: {
-    background: '#e2cdf2',
-    borderColor: '#8834cb'
-  }
 }

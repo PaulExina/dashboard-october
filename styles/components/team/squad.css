@@ -1,0 +1,47 @@
+.member {
+  border: 2px dashed grey;
+  border-radius: 50%;
+  max-height: 64px;
+  width: 64px;
+  opacity: 0.5
+}
+
+.member.filled {
+  border: none;
+  color: white;
+  opacity: 1;
+}
+
+.member.title {
+  flex: 1 0 100%;
+  max-width: none;
+  max-height: 32px;
+  border-radius: 6px;
+}
+
+.member.design {
+  border-color: #4fbdb2;
+  background: #cfeeeb;
+}
+
+.member.design.filled {
+  background: #4fbdb2;
+}
+
+.member.product {
+  background: #fae5d6;
+  border-color: #eb9c64;
+}
+
+.member.product.filled {
+  background: #eb9c64;
+}
+
+.member.tech {
+  background: #e2cdf2;
+  border-color: #8834cb
+}
+
+.member.tech.filled {
+  background: #8834cb;
+}

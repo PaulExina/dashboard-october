@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Modal } from '../components/modal';
 import metrics from '../public/metrics.json';
-import { useRouter } from 'next/router';
 
 const DashCard = ({metric}) => {
   const [isOpened, setIsOpened] = useState(false);

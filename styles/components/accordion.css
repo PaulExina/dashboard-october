@@ -1,0 +1,13 @@
+.accordion .accordion-toggle {
+  cursor: pointer;
+}
+
+.accordion .accordion-body {
+  display: flex;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.accordion .accordion-body.expanded {
+  max-height: fit-content;
+}

@@ -1,5 +1,12 @@
 @import 'https://use.typekit.net/nmv7mjy.css';
+
 @import './containers/modal.css';
+
+/*
+  Components
+*/
+@import './components/accordion.css';
+@import './components//team/squad.css';
 
 * {
   box-sizing: border-box;

@@ -1,0 +1,105 @@
+[ {
+  "title": "Releases",
+  "id": "releases",
+  "endpoint": "notion/github",
+  "position": {
+    "column": {
+      "index": 1,
+      "span": 2
+    },
+    "row": {
+      "index": 1,
+      "span": 2
+    }
+  }
+}, {
+  "title": "Calendar",
+  "id": "calendar",
+  "endpoint": "outlook",
+  "position": {
+    "column": {
+      "index": 3,
+      "span": 2
+    },
+    "row": {
+      "index": 1
+    }
+  }
+}, {
+  "title": "API Status",
+  "id": "api-status",
+  "endpoint": "hyperping"
+}, {
+  "title": "Build",
+  "id": "builds",
+  "endpoint": "github",
+  "position": {
+    "column": {
+      "index": 4
+    },
+    "row": {
+      "index": 2,
+      "span": 2
+    }
+  }
+}, {
+  "title": "Days without SF incident",
+  "id": "sf-incident",
+  "endpoint": "manual",
+  "position": {
+    "column": {
+      "index": 2
+    },
+    "row": {
+      "index": 4,
+      "span": 2
+    }
+  }
+}, {
+  "title": "Bugs",
+  "id": "bugs",
+  "endpoint": "notion/jira/slack"
+}, {
+  "title": "PR in review",
+  "id": "review",
+  "endpoint": "github",
+  "position": {
+    "column": {
+      "index": 1
+    },
+    "row": {
+      "index": 3,
+      "span": 3
+    }
+  }
+}, {
+  "title": "Team",
+  "id": "team",
+  "endpoint": "bamboohr/manual",
+  "position": {
+    "column": {
+      "index": 2,
+      "span": 2
+    },
+    "row": {
+      "index": 3
+    }
+  }
+}, {
+  "title": "Day-offs",
+  "id": "day-offs",
+  "endpoint": "bamboohr/manual"
+}, {
+  "title": "Tech Product Kickoff US",
+  "id": "product-us",
+  "endpoint": "jira",
+  "position": {
+    "column": {
+      "index": 3
+    },
+    "row": {
+      "index": 4,
+      "span": 2
+    }
+  }
+}]

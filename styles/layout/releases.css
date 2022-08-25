@@ -1,0 +1,69 @@
+section {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.release-summary {
+  width: 20%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
+  top: 24px;
+  left: 24px;
+  bottom: 24px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(19, 55, 128, .09), 0px 0px 2px rgba(19, 55, 128, .11);
+}
+
+.release-summary .thumbnail, .release-summary .details {
+  flex: 1;
+}
+
+.release-summary .thumbnail  {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.release-summary .thumbnail h3, .release-summary .thumbnail span {
+  display: none;
+}
+
+.release-summary .thumbnail.placeholder {
+  align-items: center;
+  background: #3F455A;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 16px 0 16px;
+}
+
+.release-summary .thumbnail.placeholder h3, .release-summary .thumbnail.placeholder span {
+  display: block;
+}
+
+.release-summary .thumbnail.placeholder span {
+  font-size: 50px;
+}
+
+.release-summary h1 {
+  margin: 0 0 8px 0;
+}
+
+.release-summary .details {
+  padding: 16px;
+}
+
+
+.release-summary p, .release-summary a {
+  font-size: 14px;
+  margin: 0;
+}
+

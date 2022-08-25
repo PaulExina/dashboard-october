@@ -1,0 +1,55 @@
+.squad {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: scroll;
+  padding-bottom: 48px;
+}
+
+.member {
+  border: 2px dashed grey;
+  border-radius: 50%;
+  min-height: 64px;
+  max-width: 64px;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.member.filled {
+  border: none;
+  color: white;
+  opacity: 1;
+}
+
+.member.design {
+  border-color: #4fbdb2;
+  background: #cfeeeb;
+}
+
+.member.design.filled {
+  background: #4fbdb2;
+}
+
+.member.product {
+  background: #fae5d6;
+  border-color: #eb9c64;
+}
+
+.member.product.filled {
+  background: #eb9c64;
+}
+
+.member.tech {
+  background: #e2cdf2;
+  border-color: #8834cb;
+}
+
+.member.tech.filled {
+  background: #8834cb;
+}
+
+.member.data {
+  border-color: #ac6363;;
+}

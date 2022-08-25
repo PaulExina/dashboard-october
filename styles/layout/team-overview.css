@@ -1,0 +1,78 @@
+.team-overview {
+  display: grid;
+  height: 100%;
+  gap: 16px;
+}
+
+.team-overview article {
+  grid-column: 1/ span 3;
+  grid-row: 1/ span 4;
+}
+
+.team-overview aside {
+  grid-column: 4;
+  grid-row: 1/ span 2;
+}
+
+.team-caption {
+  align-items: center;
+  display: flex;
+  margin: 0 0 8px 0;
+}
+
+.team-caption p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.team-caption span, .subteam-caption span {
+  border-radius: 4px;
+  display: inline-flex;
+  height: 16px;
+  margin: 0 8px 0 0;
+  width: 16px;
+}
+
+.team-caption.data span {
+  background: #ac6363;
+}
+
+.team-caption.design span {
+  background: #4fbdb2;
+}
+
+.team-caption.product span {
+  background: #eb9c64;
+}
+
+.team-caption.tech span {
+  background: #8834cb
+}
+
+.subteam-caption {
+  align-items: center;
+  display: flex;
+  margin: 0 0 4px 24px;
+}
+
+.subteam-caption p {
+  font-weight: 300;
+  margin: 0;
+}
+
+.subteam-caption.back-end span {
+  background: #d3455c;
+}
+
+.subteam-caption.front-end span {
+  background: #2c88d9;
+}
+
+.subteam-caption.fullstack span {
+  background: #730fc3;
+}
+
+.subteam-caption.devops span {
+  background: #f7c946;
+}

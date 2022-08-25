@@ -1,0 +1,31 @@
+[{
+  "name": "Mus Mastour",
+  "type": "tech",
+  "end": "back",
+  "role": "junior",
+  "squad": ""
+}, {
+  "name": "Nadine Matar",
+  "type": "design",
+  "end": "",
+  "role": "senior",
+  "squad": ""
+}, {
+  "name": "Ash Singh",
+  "type": "product",
+  "end": "",
+  "role": "lead",
+  "squad": ""
+}, {
+  "name": "Thibault Couloumy",
+  "type": "tech",
+  "end": "front",
+  "role": "em",
+  "squad": ""
+}, {
+  "name": "Tej Sherkar",
+  "type": "data",
+  "end": "",
+  "role": "lead",
+  "squad": ""
+}]

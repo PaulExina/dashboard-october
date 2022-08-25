@@ -1,0 +1,26 @@
+dialog {
+  border: none;
+  background: transparent;
+}
+
+dialog::backdrop {
+  background-color: rgba(36, 37, 51, .65);
+}
+
+dialog .modal {
+  background: white;
+  box-shadow: 0px 10px 20px rgba(0, 26, 49, 0.28);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+dialog .modal .close-button {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+dialog .modal .close-button:hover svg path {
+  fill: #0055EA;
+}

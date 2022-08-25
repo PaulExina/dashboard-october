@@ -1,13 +1,5 @@
 @import 'https://use.typekit.net/nmv7mjy.css';
 
-@import './containers/modal.css';
-
-/*
-  Components
-*/
-@import './components/accordion.css';
-@import './components//team/squad.css';
-
 * {
   box-sizing: border-box;
 }
@@ -93,16 +85,6 @@ html, body {
   
 }
 
-.medium {
-  max-width: 272px;
-  max-height: 150px;
-}
-
-.large {
-  max-width: 544px;
-  max-height: 300px;
-}
-
 .dash-card {
   flex: 1;
   display: flex;
@@ -154,7 +136,7 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: 0 0 32px 0;
 }
 
 header .upper-tabs {
@@ -198,7 +180,7 @@ header .back-button {
   display: flex;
   padding: 3px;
   align-self: center;
-  margin: 0 12px 0 0;
+  margin: 0 12px 32px 0;
   cursor: pointer;
 }
 
@@ -217,3 +199,23 @@ main {
   background: #F7F9FB;
   height: 100%;
 }
+
+@import './containers/modal.css';
+
+/*
+  Components
+*/
+@import './components/accordion.css';
+@import './components//team/squad.css';
+
+/**
+* Containers
+**/
+@import './containers/modal.css';
+
+/*
+* Layouts
+*/
+@import './layout/team-overview.css';
+@import './layout/squad-overview.css';
+@import './layout/releases.css';

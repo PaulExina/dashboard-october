@@ -1,0 +1,10 @@
+.squad-overview {
+  display: flex;
+  height: 100%;
+}
+
+.squad-list {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}

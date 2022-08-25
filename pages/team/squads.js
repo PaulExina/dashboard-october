@@ -10,11 +10,17 @@ const composition = {
   tech: 6
 }
 
+const fullData = {
+  product: 1, 
+  data: 7
+}
+
 export const SquadManager = () => {
   const [squad, setSquad] = useState({
     design: [],
     product: [],
-    tech: []
+    tech: [],
+    data: []
   });
   const [observers, setObservers] = useState([]);
 
@@ -50,44 +56,30 @@ export const SquadManager = () => {
 export const TeamSquads = () => {
   return (
     <DndProvider backend={HTML5Backend}>
-      <div
-        className='overview' 
-        style={styles.overview}>
-        <div className="squadzone" style={styles.squadzone}>
+      <div className='squad-overview'>
+        <div className="squad-list">
           <TeamSquad 
             composition={composition}
             className='wrapped-card' 
-            style={{
-              gridColumn: 1,
-              gridRow: 1
-            }}>
+            >
           </TeamSquad>
           <TeamSquad  
             composition={composition}
             className='wrapped-card'
-            style={{
-              gridColumn: 2,
-              gridRow: 1
-            }}>
-            
-
+            >
           </TeamSquad>
           <TeamSquad 
             composition={composition} 
             className='wrapped-card'
-            style={{
-              gridColumn: 1,
-              gridRow: 2
-            }}>
-
+            >
           </TeamSquad>
           <TeamSquad
             composition={composition}
-            className='wrapped-card' 
-            style={{
-              gridColumn: 2,
-              gridRow: 2
-            }}>
+            className='wrapped-card'>
+          </TeamSquad>
+          <TeamSquad
+            composition={fullData}
+            className='wrapped-card'>
           </TeamSquad>
         </div>
           
@@ -98,17 +90,4 @@ export const TeamSquads = () => {
       </div>
     </DndProvider>
   )
-}
-
-const styles = {
-  overview: {
-    display: 'flex',
-    height: '100%',
-    gap: '16px'
-  }, 
-  squadzone: {
-    display: 'grid',
-    flex: 3,
-    gap: '16px'
-  }
 }

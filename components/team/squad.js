@@ -31,38 +31,39 @@ export const SquadMember = ({type}) => {
   )
 }
 
-export const TeamSquad = ({style, className, composition, children}) => {
+export const TeamSquad = ({composition}) => {
   return (
-    <article 
-      className={className}
-      style={{
-        ...style,
-        display: 'flex',
-        flexFlow: 'row wrap',
-        gap: '16px',
-        justifyContent: 'center'
-      }}>
-      <SquadMember type='title'/>
+    <article className='wrapped-card squad'>
+      <div className='squad-title'>
+        <p>Squad X</p>
+      </div>
       <SquadMember type='em'/>
       {
-        Array(composition.design)
+        Array(composition.design || 0)
           .fill()
           .map(() => (
             <SquadMember type='design'/>
           ))
       }
       {
-        Array(composition.product)
+        Array(composition.product || 0)
           .fill()
           .map(() => (
             <SquadMember type='product'/>
           ))
       }
       {
-        Array(composition.tech)
+        Array(composition.tech || 0)
           .fill()
           .map(() => (
             <SquadMember type='tech'/>
+          ))
+      }
+      {
+        Array(composition.data || 0)
+          .fill()
+          .map(() => (
+            <SquadMember type='data'/>
           ))
       }
     </article>

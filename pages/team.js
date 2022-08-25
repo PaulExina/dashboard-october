@@ -1,12 +1,21 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ArrowLeft from '../public/assets/icons/arrow-left.svg';
 import { TeamOverview } from './team/overview';
 import { TeamSquads } from './team/squads';
 
 export default function Team() {
   const [page, setPage] = useState('/');
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/users')
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data)
+      })
+  }, [])
 
   const moveTo = (href) => {
     setPage(href);
@@ -19,7 +28,7 @@ export default function Team() {
 
   const mainContent = (page) =>{
     if (page === '/') {
-      return <TeamOverview />;
+      return <TeamOverview users={users}/>;
     } else {
       return <TeamSquads />;
     }

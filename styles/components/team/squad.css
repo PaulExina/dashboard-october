@@ -1,22 +1,26 @@
+.squad {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: scroll;
+  padding-bottom: 48px;
+}
+
 .member {
   border: 2px dashed grey;
   border-radius: 50%;
-  max-height: 64px;
-  width: 64px;
-  opacity: 0.5
+  min-height: 64px;
+  max-width: 64px;
+  opacity: 0.5;
+  width: 100%;
 }
 
 .member.filled {
   border: none;
   color: white;
   opacity: 1;
-}
-
-.member.title {
-  flex: 1 0 100%;
-  max-width: none;
-  max-height: 32px;
-  border-radius: 6px;
 }
 
 .member.design {
@@ -39,9 +43,13 @@
 
 .member.tech {
   background: #e2cdf2;
-  border-color: #8834cb
+  border-color: #8834cb;
 }
 
 .member.tech.filled {
   background: #8834cb;
+}
+
+.member.data {
+  border-color: #ac6363;;
 }
